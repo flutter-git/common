@@ -26,8 +26,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         yield AuthAuthenticated(auth: authMap);
     }
     if (event is AuthLogin) {
-      authService.setAuth(event.user);
-      yield AuthAuthenticated(auth: event.user);
+      authService.setAuth(event.auth);
+      yield AuthAuthenticated(auth: event.auth);
     }
     if (event is AuthLogout) {
       authService.removeAuth();

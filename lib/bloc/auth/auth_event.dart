@@ -6,9 +6,9 @@ abstract class AuthEvent {}
 class AppLoaded extends AuthEvent {}
 
 class AuthLogin extends AuthEvent {
-  final Map<String, dynamic> user;
+  final Map<String, dynamic> auth;
 
-  AuthLogin({@required this.user});
+  AuthLogin({@required this.auth});
 }
 
 class AuthLogout extends AuthEvent {
